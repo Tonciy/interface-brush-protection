@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class BaseExceptionHandler {
 
     /**
-     * 通用自定义异常捕获(登录状态/权限验证)
+     * 通用自定义异常捕获(登录状态/权限验证、接口防刷等)
      *
      * @return
      */

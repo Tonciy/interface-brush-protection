@@ -32,7 +32,10 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(createAccessLimintInterceptor())
-                .addPathPatterns("/**");
+                .addPathPatterns("/pass/get")
+                .addPathPatterns("/pass/post")
+                .addPathPatterns("/refuse/get")
+                .addPathPatterns("/refuse/post");
     }
 
     /**
