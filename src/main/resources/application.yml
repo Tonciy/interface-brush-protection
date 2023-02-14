@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: interface-brush-protection
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf8serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  redis:
+    port: 6379
+    host: localhost
+
+# 自定义配置
+interfaceAccess:
+  second: 100        # 接口访问second秒内最多只能访问time次
+  time: 3
+  lockTime: 120      # 禁用时长--单位/秒
