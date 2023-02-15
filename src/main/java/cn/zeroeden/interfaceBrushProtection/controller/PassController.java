@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/pass")
 @Slf4j
+@AccessLimit(second = 13,maxTime = 5,forbiddenTime = 50)
 public class PassController {
 
     @GetMapping("/get")

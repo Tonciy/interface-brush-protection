@@ -2,15 +2,17 @@ package cn.zeroeden.interfaceBrushProtection.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
+import java.lang.reflect.Type;
 
 import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * 接口防刷
  */
 @Retention(RUNTIME)
-@Target(METHOD)
+@Target({METHOD, TYPE})
 public @interface AccessLimit {
 
     /**
