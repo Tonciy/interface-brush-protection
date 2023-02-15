@@ -17,6 +17,13 @@ import org.springframework.web.bind.annotation.*;
 @AccessLimit(second = 13,maxTime = 5,forbiddenTime = 50)
 public class PassController {
 
+    @GetMapping("/getOne/{id}")
+    public Result getOne(@PathVariable("id") Integer id){
+        log.info("执行[pass]-getOne()方法，id为{}", id);
+        return Result.SUCCESS();
+    }
+
+
     @GetMapping("/get")
 //    表示此接口 3 秒内最大访问次数为 2，禁用时长为 40 秒
     @AccessLimit(second = 3, maxTime = 2, forbiddenTime = 40L)
